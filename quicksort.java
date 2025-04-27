@@ -32,13 +32,18 @@ public class quicksort {
 		int pivot=a[left];
 		int i=left+1;
 		int j=right;
-		while(i<j) {
-			while(i<right && a[i]<=pivot)
-				i++;
-			while(i<j)
-				swap(i,j);
+		while (i <= j) {
+			while (i <= right && a[i] <= pivot) {
+				i++; 
+			}
+			while (j >= left && a[j] > pivot) {
+				j--;
+			}
+			if (i < j) {
+				swap(i, j); 
+			}
 		}
-		swap(left,j);
+		swap(left, j);
 		return j;
 	}
 	private void swap(int i,int j) {
