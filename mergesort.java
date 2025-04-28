@@ -1,5 +1,4 @@
 package daalab;
-import java.util.random.*;
 import java.util.Random;
 import java.util.Scanner;
 public class mergesort {
@@ -42,7 +41,7 @@ public class mergesort {
 		
 	while(i<=mid && j<=right) {
 		if(temp[i]<=temp[j]) {
-			a[k++]=temp[j++];
+			a[k++]=temp[i++];
 		}
 		else {
 			a[k++]=temp[j++];
@@ -50,6 +49,9 @@ public class mergesort {
 	}
 	while(i<=mid) {
 		a[k++]=temp[i++];
+	}
+	while(j<=right){
+		a[k++]=temp[j++];
 	}
 }
 public static void main(String[]args) {
